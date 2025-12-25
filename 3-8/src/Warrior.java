@@ -1,0 +1,12 @@
+public class Warrior extends Character{
+    public String job = "戦士";
+    public Warrior(String name, int hp) {
+        this.name = name;
+        this.hp = hp;
+    }
+    @Override
+    public  void showStatus() {
+        super.showStatus();
+        System.out.println("職業：" + job);
+    }
+}
