@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
+public class ScoreOverflowException extends GameScoreException {
 
-public class ScoreOverflowException {
+    public ScoreOverflowException(int score) {
+        super("Score cannot exceed 100", score);
+    }
 }

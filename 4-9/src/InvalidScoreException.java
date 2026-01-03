@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
+public class InvalidScoreException extends GameScoreException {
 
-public class InvalidScoreException {
+    public InvalidScoreException(int score) {
+        super("Score cannot be negative", score);
+    }
 }

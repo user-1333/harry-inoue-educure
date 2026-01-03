@@ -1,4 +1,13 @@
-package PACKAGE_NAME;
+public class GameScoreException extends Exception {
 
-public class GameScoreException {
+    private int score;
+
+    public GameScoreException(String message, int score) {
+        super(message);
+        this.score = score;
+    }
+
+    public int getScore() {
+        return score;
+    }
 }
