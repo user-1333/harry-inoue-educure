@@ -5,12 +5,12 @@ public class Main5 {
         int pencilPrice = 120*5;
         int eraserPrice = 100*2;
         int totalPrice = notePrice + pencilPrice + eraserPrice;
-        int change = amountPaid - totalPrice;
         int tax = (int) (totalPrice * 0.1);
         int finalPrice = totalPrice + tax;
-        System.out.println("小計は" + totalPrice);
-        System.out.println("消費税は" + tax);
-        System.out.println("税込みの合計金額は" + finalPrice);
-        System.out.println("おつりは" + change);
+        int change = amountPaid - finalPrice;
+        System.out.println("小計:" + totalPrice);
+        System.out.println("消費税:" + tax);
+        System.out.println("合計金額:" + finalPrice);
+        System.out.println("おつり:" + change);
     }
 }

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2ff94f4-5908-4b7f-ad9f-2ac173974417" name="変更" comment="add initial Java classes" />
+    <list default="true" id="d2ff94f4-5908-4b7f-ad9f-2ac173974417" name="変更" comment="add initial Java classes">
+      <change afterPath="$PROJECT_DIR$/../4-27/src/Main1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4-27/src/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4-28/src/Quiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4-28/src/Word.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4-28/src/WordManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main5.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,21 +25,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "user-1333"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;user-1333&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:user-1333/harry-inoue-educure.git",
-    "accountId": "ced7ea00-a9fb-4689-99de-8b2e0e7c926e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:user-1333/harry-inoue-educure.git&quot;,
+    &quot;accountId&quot;: &quot;ced7ea00-a9fb-4689-99de-8b2e0e7c926e&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="37H4T4kv8HA14v3droyo6gus7Tr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,11 +63,11 @@
     "アプリケーション.Main4.executor": "Run",
     "アプリケーション.Main5.executor": "Run",
     "アプリケーション.Main6.executor": "Run",
-    "アプリケーション.Main7.executor": "Debug",
+    "アプリケーション.Main7.executor": "Run",
     "アプリケーション.Main8.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected="アプリケーション.Main8">
+  <component name="RunManager" selected="アプリケーション.Main7">
     <configuration name="Main4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main4" />
       <module name="2-7" />
@@ -97,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="アプリケーション.Main8" />
         <item itemvalue="アプリケーション.Main7" />
+        <item itemvalue="アプリケーション.Main8" />
         <item itemvalue="アプリケーション.Main6" />
         <item itemvalue="アプリケーション.Main5" />
         <item itemvalue="アプリケーション.Main4" />
