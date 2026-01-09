@@ -7,7 +7,7 @@ public class Main6 {
         int xp = Integer.parseInt(input.next());
         int bonusRate = 25;
         int totalXP = xp + (xp * bonusRate / 100);
-        System.out.println("ボーナス経験値を加えた合計経験値は" + totalXP);
+        System.out.println("ボーナス後の経験値：" + totalXP);
         input.close();
     }
 }

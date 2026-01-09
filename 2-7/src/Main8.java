@@ -9,8 +9,8 @@ public class Main8 {
         int enemyDefense = input.nextInt();
         int damageDealt = attackPower - enemyDefense;
         int critalDamage = (int)(damageDealt * 1.5);
-        System.out.println("与えたダメージは" + damageDealt);
-        System.out.println("クリティカルダメージは" + critalDamage);
+        System.out.println("与えたダメージ:" + damageDealt);
+        System.out.println("クリティカルダメージ:" + critalDamage);
         input.close();
     }
 }
