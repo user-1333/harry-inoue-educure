@@ -1,7 +1,7 @@
 public class Main2 {
     public static void main(String[] args) {
         int points = 185;
-        if (points >= 100) {
+        if (points > 100 || points < 0) {
             System.out.println("無効な点数です。");
             return;
         }

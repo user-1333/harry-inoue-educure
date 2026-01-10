@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Main4 {
     public static void main(String[] args) {
 //        int side1 = 3;
@@ -23,6 +27,9 @@ public class Main4 {
         if (side1 == side2 && side1 == side3) {
             return "正三角形です。";
         }
+        List<Integer> sides = new ArrayList<>();
+        Collections.addAll(sides, side1, side2, side3);
+        sides.sort(Integer::compareTo);
         if (Math.pow(side1, 2) + Math.pow(side2, 2) == Math.pow(side3, 2)) {// 直角三角形の判定
             if (side1 == side2 || side1 == side3 || side2 == side3) {
                 return "直角二等辺三角形です。";
