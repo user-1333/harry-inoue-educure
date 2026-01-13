@@ -2,7 +2,7 @@ public class Main4 {
     public static void main(String[] args) {
         int num = 10;
         while (num >= 0) {
-            System.out.println("Countdown: " + num);
+            System.out.println(num);
             num--;
         }
     }
