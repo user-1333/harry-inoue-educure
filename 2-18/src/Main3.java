@@ -1,6 +1,6 @@
 public class Main3 {
     public static void main(String[] args) {
-        String original = "Hello, World!";
+        String original = "\"Hello\"";
         System.out.println("元の文字列: " + original);
         String reversed = reverseStr(original);
         System.out.println("逆順の文字列: " + reversed);

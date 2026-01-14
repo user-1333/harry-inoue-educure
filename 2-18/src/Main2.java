@@ -2,10 +2,10 @@ public class Main2 {
     public static void main(String[] args) {
         int score = 85; // Example score
         System.out.println("得点: " + score);
-        String grade = greadeCalculator(score);
+        String grade = gradeCalculator(score);
         System.out.println("評価: " + grade);
     }
-    private static String greadeCalculator(int score) {
+    private static String gradeCalculator(int score) {
         if (score >= 80) {
             return "優";
         } else if (score >= 70) {
