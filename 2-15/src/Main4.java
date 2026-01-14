@@ -12,10 +12,10 @@ public class Main4 {
         };
         System.out.println("予約前の座席表:");
         printSeats(seats);
-        System.out.print("予約したい座席の行番号を入力してください（0-4）: ");
-        int row = sc.nextInt();
-        System.out.print("予約したい座席の列番号を入力してください（0-5）: ");
-        int col = sc.nextInt();
+        System.out.print("予約したい座席の行番号を入力してください（1-5）: ");
+        int row = sc.nextInt()-1;
+        System.out.print("予約したい座席の列番号を入力してください（1-6）: ");
+        int col = sc.nextInt()-1;
         if (row < 0 || row >= seats.length || col < 0 || col >= seats[0].length) {
             System.out.println("無効な座席番号です。");
             sc.close();
