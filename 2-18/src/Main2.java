@@ -3,7 +3,7 @@ public class Main2 {
         int score = 85; // Example score
         System.out.println("得点: " + score);
         String grade = gradeCalculator(score);
-        System.out.println("評価: " + grade);
+        System.out.println("成績: " + grade);
     }
     private static String gradeCalculator(int score) {
         if (score >= 80) {
