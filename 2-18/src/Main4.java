@@ -4,12 +4,12 @@ public class Main4 {
     public static void main(String[] args) {
         int[] prices = {100, 200, 300};
         int[] amounts = {1, 2, 3};
-        System.out.println("価格配列: ");
+        System.out.print("価格配列: ");
         System.out.println(Arrays.toString(prices));
-        System.out.println("\n数量配列: ");
+        System.out.print("\n数量配列: ");
         System.out.println(Arrays.toString(amounts));
         Integer[] totalPrices = calculateTotals(prices, amounts);
-        System.out.println("\n合計金額配列(税込み): ");
+        System.out.print("\n合計金額配列(税込み): ");
         System.out.println(Arrays.toString(totalPrices));
     }
     private static Integer[] calculateTotals(int[] prices, int[] amounts) {
