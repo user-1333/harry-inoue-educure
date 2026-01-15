@@ -8,13 +8,9 @@ public class Main4 {
         int[] prices = {100, 200, 300};
         int[] amounts = {1, 2, 3};
         System.out.println("価格配列: ");
-        for (int price : prices) {
-            System.out.print(price + " ");
-        }
+        System.out.println(Arrays.toString(prices));
         System.out.println("\n数量配列: ");
-        for (int amount : amounts) {
-            System.out.print(amount + " ");
-        }
+        System.out.println(Arrays.toString(amounts));
         Integer[] totalPrices = calculateTotals(prices, amounts);
         System.out.println("\n合計金額配列(税込み): ");
         System.out.println(Arrays.toString(totalPrices));
