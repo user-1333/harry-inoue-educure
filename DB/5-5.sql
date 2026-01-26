@@ -1,0 +1,16 @@
+-- 1
+SELECT name,salary FROM employees WHERE salary > 50000;
+
+-- 2
+SELECT name AS 社員名, salary AS 給与額 FROM employees;
+
+-- 3
+UPDATE employees SET department = '営業' WHERE name = '田中 一郎';
+
+-- 4
+DELETE FROM employees WHERE department = '人事';
+
+-- 5
+INSERT INTO employees (name, department, salary, hire_date)
+VALUES ('鳥山 信夫', 'IT',60000,'2023-09-15'),
+ ('山本 三郎', '開発',58000,'2023-09-20');

@@ -1,0 +1,20 @@
+body {
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: calc(16px * 1.5);
+}
+
+p.important {
+    color: #ff0000;
+}
+
+p {
+    line-height: 1.5;
+}

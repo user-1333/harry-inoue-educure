@@ -1,0 +1,81 @@
+① FROM        ← テーブルを読む
+② WHERE       ← 行を絞る（まだ集計できない）
+③ GROUP BY    ← グループ化する
+④ HAVING      ← グループ後の絞り込み
+⑤ SELECT      ← 出力を作る（エイリアスここで作成）
+⑥ DISTINCT    ← 出力の重複排除
+⑦ ORDER BY    ← 並び替え（SELECT後なのでエイリアスOK）
+⑧ LIMIT       ← 最後に件数削る
+
+
+SELECT 文
+├─ SELECT 句（出力）
+│    ├─ カラム
+│    ├─ 式（計算式）
+│    ├─ 集計関数
+│    └─ AS 別名
+│
+├─ FROM 句（データ源）
+│    ├─ テーブル
+│    ├─ AS 別名
+│    ├─ JOIN
+│    │     ├─ 結合先テーブル
+│    │     ├─ ON 条件
+│    │     └─ USING 条件
+│    └─ サブクエリ
+│
+├─ WHERE 句（行フィルタ）
+│    ├─ AND / OR / NOT
+│    ├─ 比較（= > < >= <= !=）
+│    ├─ LIKE / BETWEEN / IN / REGEXP 
+│    ├─ IS NULL
+│    └─ サブクエリ
+│
+├─ GROUP BY 句（グループ化）
+│    └─ カラムリスト
+│
+├─ HAVING 句（グループのフィルタ）
+│    ├─ 集計関数
+│    ├─ AND / OR / NOT
+│    └─ サブクエリ
+│
+├─ ORDER BY 句（並び替え）
+│    ├─ カラム
+│    ├─ 別名
+│    └─ ASC / DESC
+│
+└─ LIMIT / OFFSET 句（制限）
+
+
+JOIN句
+├─ 結合対象（テーブル / サブクエリ / ビュー）
+│     ├─ テーブル名
+│     ├─ AS 別名
+│     └─ サブクエリ（SELECT）
+│
+├─ 結合タイプ（JOINの種類）
+│     ├─ INNER JOIN
+│     ├─ LEFT JOIN
+│     ├─ RIGHT JOIN
+│     ├─ FULL OUTER JOIN（MySQLは代用）
+│     ├─ CROSS JOIN
+│     └─ NATURAL JOIN
+│
+├─ 結合条件
+│     ├─ ON 句
+│     │     ├─ カラム = カラム
+│     │     ├─ AND / OR（複合条件）
+│     │     ├─ 比較演算子（= > < != >= <=）
+│     │     ├─ BETWEEN
+│     │     ├─ LIKE
+│     │     ├─ IN
+│     │     └─ サブクエリ（ON内に書ける）
+│     │
+│     └─ USING 句
+│           └─ 共通カラム名（自動一致）
+│
+└─ ヒント（データベース依存）
+      ├─ INDEX HINT
+      ├─ FORCE INDEX
+      ├─ USE INDEX
+      └─ STRAIGHT_JOIN（MySQL）

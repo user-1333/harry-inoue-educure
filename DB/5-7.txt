@@ -1,0 +1,43 @@
+1
+educure_db=# SELECT name,salary FROM employees WHERE salary > 48000;
+   name    | salary
+-----------+--------
+ 高田 太郎 |  55000
+ 田村 花子 |  62000
+ 田中 一郎 |  70000
+ 高橋 美咲 |  53000
+(4 rows)
+
+2
+educure_db=# SELECT name,department FROM employees WHERE department = '営業' OR department = '開発' OR department = 'IT';   
+   name    | department
+-----------+------------
+ 高田 太郎 | 営業
+ 鈴木 次郎 | IT
+ 田中 一郎 | 営業
+(3 rows)
+
+3
+educure_db=# SELECT * FROM employees WHERE manager_id IS NULL AND name LIKE '%田%';
+ employee_id |   name    | department | salary | hire_date  | manager_id
+-------------+-----------+------------+--------+------------+------------
+        5673 | 高田 太郎 | 営業       |  55000 | 2019-06-15 | 
+
+        5676 | 田中 一郎 | 営業       |  70000 | 2018-09-10 | 
+
+(2 rows)
+
+4
+educure_db=# SELECT name,department,salary FROM employees WHERE salary BETWEEN 50000 AND 60000;
+   name    |   department   | salary
+-----------+----------------+--------
+ 高田 太郎 | 営業           |  55000
+ 高橋 美咲 | マーケティング |  53000
+(2 rows)
+
+5
+educure_db=# SELECT name,department FROM employees WHERE department != '営業' AND salary > 55000;
+   name    |   department
+-----------+----------------
+ 田村 花子 | マーケティング
+(1 row)
