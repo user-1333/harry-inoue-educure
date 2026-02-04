@@ -5,7 +5,7 @@ public class Main3 {
         System.out.println("現在の残高: " + myAccount.getBalance() + "円");
 
         myAccount.withdraw(3000);
-        System.out.println("3000円引き出しました。現在の残高: " + myAccount.getBalance() + "円");
+        System.out.println("3000円引き出しました。\n現在の残高: " + myAccount.getBalance() + "円");
 
         myAccount.withdraw(10000); // 残高不足を試みる
     }

@@ -11,7 +11,7 @@ public class Book {
     }
     public void lend() {
         if (isLent) {
-            System.out.println("この本はすでに貸し出されています。");
+            System.out.println("申し訳ありません。この本は貸出中です");
             return;
         }
         isLent = true;
