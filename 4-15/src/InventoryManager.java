@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class InventoryManager {
-    private Map<String, Product> inventory = new HashMap<>();
+    private final Map<String, Product> inventory = new HashMap<>();
     public void addProduct(String name, int stock) {
         Product product = new Product(name, stock);
         inventory.put(name, product);
@@ -20,6 +20,7 @@ public class InventoryManager {
         if (product.isPresent()) {
             // TODO:ここで在庫を1減らす
             System.out.println(name + "の販売: 在庫から1個減少");
+            product.get().decreaseStock();
         } else {
             // 存在しない場合
             System.out.println("商品が見つかりません");

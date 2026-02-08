@@ -16,14 +16,14 @@ public class Main3 {
         //商品の追加
         inventory.put("おにぎり", 15);
         inventory.put("サンドイッチ", 8);
-        inventory.put("弁当", 5);
+        inventory.put("お弁当", 5);
 
         //在庫の表示
-        System.out.println("在庫リスト: " + inventory);
+        System.out.println("在庫状況: " + inventory);
         //商品を販売
         sell("おにぎり", inventory);
         //販売後の在庫の表示
-        System.out.println("販売後の在庫リスト: " + inventory);
+        System.out.println("在庫リスト: " + inventory);
         //在庫の確認
         System.out.println("アイスクリームは在庫にありますか？: " + inventory.containsKey("アイスクリーム"));
     }

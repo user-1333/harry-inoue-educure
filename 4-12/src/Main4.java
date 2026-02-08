@@ -1,7 +1,7 @@
 public class Main4 {
     public static void main(String[] args) {
-        PartyMember original = new PartyMember("勇者");
-        original.addSkill("ファイヤー");
+        PartyMember original = new PartyMember("アリス");
+        original.addSkill("ファイア");
         original.addSkill("ブリザード");
         PartyMember cloned = original.clone();
         cloned.addSkill("サンダー");

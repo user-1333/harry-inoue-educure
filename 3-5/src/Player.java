@@ -18,11 +18,6 @@ public class Player {
         this.hp = hp;
     }
 
-    public void heal(int amount) {
-        this.hp += amount;
-        System.out.println("回復ポーションを使用しました。");
-    }
-
     public void displayInfo() {
         System.out.println("Player Name: " + name);
         System.out.println("Player HP: " + hp);

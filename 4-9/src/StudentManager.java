@@ -4,8 +4,7 @@ public class StudentManager {
 
     public void addStudent(String name) {
         if (count >= students.length) {
-            System.out.println("Cannot add more students. Maximum capacity reached.");
-            return;
+            throw new IllegalArgumentException("Cannot add more students. Maximum capacity reached.");
         }
         students[count] = name;
         count++;
@@ -13,16 +12,14 @@ public class StudentManager {
 
     public String getStudent(int id) {
         if (id < 0 || id >= students.length || students[id] == null) {
-            System.out.println("Invalid student ID: " + id);
-            return  null;
+            throw  new IllegalArgumentException("Invalid student ID: " + id);
         }
         return students[id];
     }
 
     public void updateStudent(int id, String name) {
         if (id < 0 || id >= students.length) {
-            System.out.println("Invalid student ID: " + id);
-            return;
+            throw new IllegalArgumentException("Invalid student ID: " + id);
         }
         students[id] = name;
     }

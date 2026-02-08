@@ -6,7 +6,7 @@ public class Inventory<T> {
         this.category = category;
     }
     public void stockIn(T temp) {
-        System.out.printf("%sコーナー:%sを入荷", this.category.getDisplayName(), temp);
+        System.out.printf("%sコーナー:%sを入荷\n", this.category.getDisplayName(), temp);
         this.item = temp;
     }
     public T stockOut() {

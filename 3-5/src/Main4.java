@@ -4,7 +4,6 @@ public class Main4 {
         product.setName("Laptop");
         product.setPrice(1500);
 
-        System.out.println("Product Name: " + product.getName());
-        System.out.println("Product Price: ￥" + product.getPrice());
+        product.displayInfo();
     }
 }

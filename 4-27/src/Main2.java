@@ -4,13 +4,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class Main2 {
     public static void main(String[] args) {
         try {
             // 検索キーワードをCQL形式で設定
             String query = "title = Java"; // CQL形式
-            String encodedQuery = URLEncoder.encode(query, "UTF-8");
+            String encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
 
             // 国立国会図書館APIのエンドポイント
             String endpoint = "https://ndlsearch.ndl.go.jp/api/sru";
@@ -34,7 +35,7 @@ public class Main2 {
 
             // レスポンスを読み込み、XMLをコンソールに出力
             InputStream is = conn.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 
             String line;
             while ((line = reader.readLine()) != null) {

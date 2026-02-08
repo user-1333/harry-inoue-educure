@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main3 {
     public static void main(String[] args) {
@@ -12,7 +13,8 @@ public class Main3 {
 //            int power2 = o2.getBattlePower();
 //            return Integer.compare(power1, power2);
 //        });
-        characters.sort(Character::CompareTo);
+        Collections.sort(characters);
+        System.out.println("--- 戦闘力順 ---");
         for (Character character : characters) {
             System.out.println(character.toString());
         }

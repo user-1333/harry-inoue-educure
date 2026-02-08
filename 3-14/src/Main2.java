@@ -6,9 +6,14 @@ public class Main2 {
         };
         double area = 0;
         for (Shape shape : shapes) {
-            System.out.println("Area: " + shape.getArea());
+            if (shape instanceof Circle){
+                System.out.print("円の");
+            } else if (shape instanceof Rectangle){
+                System.out.print("長方形の");
+            }
+            System.out.println("面積: " + shape.getArea());
             area += shape.getArea();
         }
-        System.out.println("Total Area: " + area);
+        System.out.println("総面積: " + area);
     }
 }

@@ -17,4 +17,9 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public void displayInfo() {
+        System.out.println("Product Name: " + name);
+        System.out.println("Product Price: ￥" + price);
+    }
 }

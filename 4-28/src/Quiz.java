@@ -1,7 +1,5 @@
 import lombok.Getter;
 
-import java.util.Collections;
-
 public class Quiz {
     @Getter
     private int score;
@@ -14,7 +12,7 @@ public class Quiz {
 
     public Word getRandomWord(){
         int size = wordManager.getWordCount();
-        Collections.shuffle(wordManager.getWords());
+        System.out.println("単語数: " + size);
         int randomIndex = (int)(Math.random() * size);
         Word randomWord = wordManager.getWords().get(randomIndex);
         System.out.println("日本語に翻訳: " + randomWord.getEnglish());

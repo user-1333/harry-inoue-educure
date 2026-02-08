@@ -1,19 +1,25 @@
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 public class Main2 {
     public static void main(String[] args) {
         String filePath = "excersise.properties";
         Properties properties = new Properties();
-        // プロパティファイルを作成
-        try (FileOutputStream fos = new FileOutputStream(filePath)) {
-            properties.setProperty("username", "testuser");
-            properties.setProperty("password", "123456");
-            System.out.println("プロパティファイルを作成しました: " + filePath);
-            properties.store(fos, "test properties");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
+        // プロパティファイルを読み込む
+        try (FileInputStream fis = new FileInputStream(filePath)) {
+            properties.load(fis);
+
+            // 値を取得
+            String username = properties.getProperty("username");
+            String password = properties.getProperty("password");
+
+            System.out.println("username = " + username);
+            System.out.println("password = " + password);
+
+        } catch (IOException e) {
+            System.out.println("プロパティファイルの読み込み中にエラーが発生しました: " + e.getMessage());
+        }
     }
 }

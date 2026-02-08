@@ -2,12 +2,14 @@ public class Main3 {
     public static void main(String[] args) {
         Inventory<String> fruits = new Inventory<>(ProductCategory.FRUITS);
         // TODO: 残りも同様に作成
-
+        Inventory<String> vegetables = new Inventory<>(ProductCategory.VEGETABLES);
+        Inventory<String> dairy = new Inventory<>(ProductCategory.DAIRY);
         // 商品を入荷
         // TODO: それぞれの在庫に商品を入荷
         fruits.stockIn("りんご");
         // TODO: 残りも同様に入荷
-
+        vegetables.stockIn("トマト");
+        dairy.stockIn("牛乳");
         System.out.println();
         // TODO: りんごを出荷
         System.out.println(fruits.stockOut() + "を出荷しました");

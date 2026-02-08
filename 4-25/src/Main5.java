@@ -5,12 +5,12 @@ public class Main5 {
         Function<Integer,Integer> multiplyByTwo = x -> x * 2;
         Function<Integer,Integer> subtractFive = x -> x - 5;
         Function<Integer,Boolean> isPositive = x -> x > 0;
-        int num = 2;
+        int num = 8;
         boolean result = isPositive.apply(subtractFive.apply(multiplyByTwo.apply(num)));
         if(result){
             System.out.println("正の数です");
         }else{
-            System.out.println("正の数ではありません");
+            System.out.println("負の数またはゼロです");
         }
     }
 }

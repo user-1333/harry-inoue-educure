@@ -2,7 +2,12 @@ public class GameCharacter {
     private String name;
     private int health;
     private Weapon weapon;
+    public GameCharacter(String name, int health ,Weapon weapon) {
+        this.name = name;
+        this.weapon = weapon;
+        this.health = health;
 
+    }
     public String getName() {
         return name;
     }

@@ -7,8 +7,8 @@ public class Main2 {
         System.out.println("使用前:");
         player.displayInfo();
 
-        int healAmount = 50; // 回復量を50に設定
-        player.heal(healAmount);
+        HealingPotion potion = new HealingPotion();
+        potion.heal(player);
 
         System.out.println("プレイヤーのHP: "+player.getHp());
     }

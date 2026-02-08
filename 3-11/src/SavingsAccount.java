@@ -23,7 +23,9 @@ public class SavingsAccount implements BankAccount {
         if (amount > 0) {
             balance += amount;
             transactionHistory.add("入金： " + amount);
+            return;
         }
+        System.out.printf("入金額が不正です: %d%n", amount);
     }
 
     // 出金
@@ -32,7 +34,9 @@ public class SavingsAccount implements BankAccount {
         if (amount > 0 && balance >= amount) {
             balance -= amount;
             transactionHistory.add("出金： " + amount);
+            return;
         }
+        System.out.printf("出金額が不正です: %d%n", amount);
     }
 
     // 残高取得
@@ -46,10 +50,10 @@ public class SavingsAccount implements BankAccount {
     public void displayAccountInfo() {
         System.out.println("口座名義人： " + accountHolder);
         System.out.println("残高： " + balance);
-        System.out.println("取引履歴：");
-
-        for (String history : transactionHistory) {
-            System.out.println(history);
-        }
+//        System.out.println("取引履歴：");
+//
+//        for (String history : transactionHistory) {
+//            System.out.println(history);
+//        }
     }
 }

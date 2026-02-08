@@ -13,12 +13,13 @@ public class Main2 {
         System.out.println("空チェック: " + fruitWarehouse.isEmpty());
 
         // 日用品倉庫のテスト
+        Warehouse<String> dailyItems = new Warehouse<>();
         System.out.println("\n日用品倉庫:");
-        fruitWarehouse.store("ティッシュ");
+        dailyItems.store("ティッシュ");
         // TODO: ティッシュを取り出し
-        fruitWarehouse.retrieve();
+        dailyItems.retrieve();
         // TODO: 空チェック
-        System.out.println("空チェック: " + fruitWarehouse.isEmpty());
+        System.out.println("空チェック: " + dailyItems.isEmpty());
 
     }
 }

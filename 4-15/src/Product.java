@@ -1,5 +1,5 @@
 public class Product {
-    private String name;
+    private final String name;
     private int stock;
 
     public Product(String name, int stock) {
@@ -10,6 +10,9 @@ public class Product {
     // TODO: 在庫を1個減らすメソッド
     public void decreaseStock() {
         // TODO: stockが0より大きい場合のみ減らす
+        if  (stock > 0) {
+            stock--;
+        }
     }
 
     public int getStock() {

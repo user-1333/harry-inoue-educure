@@ -38,8 +38,8 @@ public class Main4 {
         System.out.println("イベント名: " + event.eventName);
         System.out.println("開始: " + event.getLocalTime());
         System.out.println("終了: " + event.endTime.format(DateTimeFormatter.ofPattern("yyyy年M月d日 HH:mm z")));
-        System.out.println("イベント期間: " + event.getEventDuration());
-        System.out.println("開始: " + event.getLocalTime());
-        System.out.println("開始時間 (UTC): " + event.getUtcTime());
+        System.out.println("期間: " + event.getEventDuration());
+        System.out.println("現地時間: " + event.getLocalTime());
+        System.out.println("UTC時間: " + event.getUtcTime());
     }
 }

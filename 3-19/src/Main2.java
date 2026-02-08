@@ -5,14 +5,14 @@ public class Main2 {
         Student student3 = new Student(1002, "鈴木次郎");
 
         if (student1.equals(student2)) {
-            System.out.println("student1とstudent2は同一の学生です。");
+            System.out.println("同一の学生です。");
         } else {
-            System.out.println("student1とstudent2は異なる学生です。");
+            System.out.println("異なる学生です。");
         }
         if (student1.equals(student3)) {
-            System.out.println("student1とstudent3は同一の学生です。");
+            System.out.println("同一の学生です。");
         } else {
-            System.out.println("student1とstudent3は異なる学生です。");
+            System.out.println("異なる学生です。");
         }
     }
 }

@@ -6,8 +6,11 @@ public class Monster {
         this.level = level;
     }
 
-    public boolean equals(Monster m) {
-        return this.name.equals(m.name) && this.level == m.level;
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Monster other)) {
+            throw new IllegalArgumentException("比較対象がモンスターではありません");
+        }
+        return this.name.equals(other.name) && this.level == other.level;
     }
     @Override
     public String toString() {

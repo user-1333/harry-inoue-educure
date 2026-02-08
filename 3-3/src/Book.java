@@ -18,6 +18,10 @@ public class Book {
         System.out.println("本を貸し出しました。");
     }
     public void returnBook() {
+        if (!isLent) {
+            System.out.println("申し訳ありません。この本は貸出されていません");
+            return;
+        }
         isLent = false;
         System.out.println("本を返却しました。");
     }

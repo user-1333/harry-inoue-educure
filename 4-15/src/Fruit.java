@@ -8,9 +8,7 @@ public class Fruit {
     }
 
     public void displayInfo() {
-        String fruitName = name;
-        int fruitPrice = price;
-        System.out.println("果物: " + fruitName);
-        System.out.println("価格: " + fruitPrice + "円");
+        System.out.println("果物: " + name);
+        System.out.println("価格: " + price + "円");
     }
 }

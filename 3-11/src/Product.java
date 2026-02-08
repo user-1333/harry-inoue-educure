@@ -14,5 +14,5 @@ public abstract class Product {
     public abstract void displayInfo();
 
     // 在庫チェックを行う抽象メソッド
-    public abstract boolean checkStock();
+    public abstract void checkStock();
 }

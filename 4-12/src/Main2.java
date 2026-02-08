@@ -1,17 +1,17 @@
 public class Main2 {
     public static void main(String[] args) {
-        Monster dragon = new Monster("スライム", 50);
-        Monster dragon1 = new Monster("スライム", 10);
-        Monster dragon2 = new Monster("スライム", 50);
-        if (dragon.equals(dragon1)) {
-            System.out.println("スライムとスライム1は同じモンスターです");
+        Monster monster = new Monster("スライム", 5);
+        Monster monster1 = new Monster("スライム", 5);
+        Monster monster2 = new Monster("スライム", 10);
+        if (monster.equals(monster1)) {
+            System.out.println("スライムLv.5 と スライムLv.5 は同じモンスターです");
         } else {
-            System.out.println("スライムとスライム1は別のモンスターです");
+            System.out.println("スライムLv.5 と スライムLv.10 は違うモンスターです");
         }
-        if (dragon.equals(dragon2)) {
-            System.out.println("スライムとスライム2は同じモンスターです");
+        if (monster.equals(monster2)) {
+            System.out.println("スライムLv.5 と スライムLv.5 は同じモンスターです");
         } else {
-            System.out.println("スライムとスライム2は別のモンスターです");
+            System.out.println("スライムLv.5 と スライムLv.10 は違うモンスターです");
         }
     }
 }

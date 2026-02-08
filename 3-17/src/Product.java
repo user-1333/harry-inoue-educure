@@ -5,11 +5,11 @@ public class Product {
         this.name = name;
         this.stock = stock;
     }
-    public String getName() {
-        return name;
+    public void getName() {
+        System.out.println("商品名:" + name);
     }
-    public int getStock() {
-        return stock;
+    public void getStock() {
+        System.out.printf("在庫数:%d\n", stock);
     }
 
     public void addStock(int amount) {
@@ -18,6 +18,7 @@ public class Product {
             return;
         }
         this.stock += amount;
+        System.out.printf("在庫数(%d個入荷):%d\n", amount, stock);
     }
 
     public void removeStock(int amount) {
@@ -26,6 +27,7 @@ public class Product {
             return;
         }
         this.stock -= amount;
+        System.out.printf("在庫数(%d個出荷):%d\n", amount, stock);
     }
 
 

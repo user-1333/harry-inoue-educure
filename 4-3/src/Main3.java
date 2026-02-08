@@ -2,7 +2,7 @@ import java.util.regex.Pattern;
 
 public class Main3 {
     public static void main(String[] args) {
-        Pattern name = Pattern.compile("^[a-zA-Z0-9_]{4,16}$");
+        Pattern name = Pattern.compile("^(?![0-9]+$)[a-zA-Z0-9_]{4,16}$");
         Pattern password = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
         String[] usernames = {"Player_1", "123456", "P@layer"};
         String[] passwords = {"Password123", "password123", "Pass"};

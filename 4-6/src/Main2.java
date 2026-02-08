@@ -10,8 +10,8 @@ public class Main2 {
                 .mapToDouble(Integer::doubleValue)
                 .average().orElse(0));
         System.out.println("最高点: " + Collections.max(list));
-        System.out.println("不合格者数 (60点未満): " + list.stream()
-                .filter(score -> score < 60)
+        System.out.println("不合格者数: " + list.stream()
+                .filter(score -> score <= 60)
                 .count());
     }
 }

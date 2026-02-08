@@ -1,6 +1,7 @@
 public class Warrior extends Character{
     public String job = "戦士";
     public Warrior(String name, int hp) {
+        super(name, hp);
         this.name = name;
         this.hp = hp;
     }

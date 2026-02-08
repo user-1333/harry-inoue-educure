@@ -21,13 +21,11 @@ public class Book extends Product {
 
     // 在庫チェック
     @Override
-    public boolean checkStock() {
+    public void checkStock() {
         if (stockQuantity >= 1) {
             System.out.println("在庫あり");
-            return true;
         } else {
             System.out.println("在庫なし");
-            return false;
         }
     }
 }

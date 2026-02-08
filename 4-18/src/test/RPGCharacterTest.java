@@ -28,10 +28,14 @@ public class RPGCharacterTest {
     void testMaxLevel() {
         // ここに境界値のテストを書く
         RPGCharacter rpgCharacter = new RPGCharacter();
-        for (int i = 1; i < 99; i++) {
+        for (int i = 1; i < 98; i++) {
             rpgCharacter.levelUp();
         }
         try {
+            rpgCharacter.levelUp();
+            assertEquals(99, rpgCharacter.getLevel(), "レベルは99であるべき");
+            assertEquals(1080, rpgCharacter.getHP(), "レベル99のHPは1080であるべき");
+            assertEquals(540, rpgCharacter.getMP(), "レベル99のMPは540であるべき");
             rpgCharacter.levelUp();
             fail("最大レベルに達した場合、例外が発生するはず");
         } catch (IllegalStateException e) {

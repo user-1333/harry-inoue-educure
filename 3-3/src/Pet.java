@@ -10,11 +10,13 @@ public class Pet {
         this.name = name;
     }
 
-    public int getEnargy() {
+    public int getEnergy() {
         return energy;
     }
-
-    public void setEnargy(int energy) {
+    public int showEnergy(){
+        return this.energy;
+    }
+    public void setEnergy(int energy) {
         this.energy = energy;
     }
 

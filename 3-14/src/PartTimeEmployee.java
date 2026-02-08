@@ -10,7 +10,7 @@ public class PartTimeEmployee extends  Employee {
 
     @Override
     public String getRole() {
-        String role = "アルバイト";
+        String role = "パートタイム";
         return super.getRole(role);
     }
 
