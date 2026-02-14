@@ -23,7 +23,9 @@ public class VocabularyApp {
             System.out.println("2：クイズを受ける");
             System.out.println("3：CSVファイルから単語をインポート");
             System.out.println("4：CSVファイルに単語をエクスポート");
-            System.out.println("5：終了する");
+            System.out.println("5：単語を削除する");
+            System.out.println("6：単語を更新する");
+            System.out.println("7：終了する");
 
             int input = this.sc.nextInt();
             switch (input) {
