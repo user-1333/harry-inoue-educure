@@ -22,7 +22,8 @@ public class InsertProduct {
             System.out.println("商品が正常に追加されました。");
             try (Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                  ResultSet rs = stmt.executeQuery("SELECT * FROM products")) {
-                ResultSetPrinter.print(rs);
+                    
+
             }
 
         } catch (SQLException e) {
