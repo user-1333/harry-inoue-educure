@@ -6,7 +6,7 @@ h1 {
     color: navy;
 }
 
-ul {
+.navigation ul {
     list-style: none;
     display: flex;
     padding: 0;
@@ -15,11 +15,11 @@ ul {
 a {
     color: #333;
     transition: color 0.3s ease-in-out;
+    text-decoration: none
 }
 a:hover {
     color: #ff0000;
 }
-
 footer {
     text-align: center;
 }

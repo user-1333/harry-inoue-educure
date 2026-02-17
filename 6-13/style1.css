@@ -12,6 +12,7 @@ h2 {
 }
 
 p.important {
+    font-weight: bold;
     color: #ff0000;
 }
 
