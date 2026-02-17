@@ -21,4 +21,4 @@ SELECT * FROM books;
 UPDATE books SET title = '未来のSQL' WHERE title = 'SQL入門';
 
 -- 5
-SELECT * FROM books WHERE genre='小説' ORDER BY publication_year DESC;
+SELECT * FROM books WHERE genre='小説' AND publication_year >= 2000 ORDER BY publication_year DESC ;

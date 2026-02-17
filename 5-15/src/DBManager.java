@@ -1,30 +1,35 @@
 import java.sql.*;
 
-public class DBManager {
+public class DBManager implements AutoCloseable {
     private final String url = "jdbc:postgresql://localhost:5432/vocabulary_db";
     private final String username = "postgres";
     private final String password = "user";
     private Connection conn = null;
+
     public DBManager() {
         initializeDatabase();
     }
+
     public Connection getConnection() {
         return this.conn;
     }
-    void initializeDatabase(){
+
+    private void initializeDatabase() {
         try {
             this.conn = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("データベース接続に失敗しました", e);
         }
     }
+
+    @Override
     public void close() {
         if (this.conn != null) {
-             try {
-                 this.conn.close();
-             } catch (SQLException e) {
-                 throw new RuntimeException(e);
-             }
+            try {
+                this.conn.close();
+            } catch (SQLException e) {
+                throw new RuntimeException("データベース接続のクローズに失敗しました", e);
+            }
         }
     }
 }

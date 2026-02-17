@@ -75,7 +75,7 @@ public class VocabularyApp {
                 case 5:
                     System.out.println("削除する英単語を入力してください：");
                     String deleteEn = sc.next();
-                    wordManager.deleteword(deleteEn);
+                    wordManager.deleteWord(deleteEn);
                     System.out.println("単語を削除しました。");
                     break;
                 case 6:
@@ -88,6 +88,8 @@ public class VocabularyApp {
                     break;
                 case 7:
                     System.out.println("終了します。");
+                    DBManager dbManager = new DBManager();
+                    dbManager.close();
                     return;
             }
         }

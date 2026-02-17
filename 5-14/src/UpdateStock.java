@@ -10,7 +10,6 @@ public class UpdateStock {
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement checkStmt = conn.prepareStatement(checkStockSQL);
              PreparedStatement updateStmt = conn.prepareStatement(updateSQL)) {
-
             // 在庫がある商品が存在するか確認
             ResultSet rs = checkStmt.executeQuery();
             rs.next();
@@ -31,6 +30,14 @@ public class UpdateStock {
             }
 
         } catch (SQLException e) {
+            try (Connection conn = DriverManager.getConnection(url, user, password)) {
+                conn.rollback();
+                System.out.println("エラーが発生したためロールバックしました。");
+            } catch (SQLException rollbackEx) {
+                System.out.println("ロールバック中にエラーが発生しました。");
+                System.out.println("詳細: " + rollbackEx.getMessage());
+
+            }
             System.out.println("エラーが発生しました。");
             System.out.println("詳細: " + e.getMessage());
         }
